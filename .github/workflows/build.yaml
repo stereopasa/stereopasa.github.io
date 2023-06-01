@@ -1,0 +1,51 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "pnpm"
+
+      - name: Install dependencies
+        env:
+          CI: true
+        run: pnpm install
+
+      - name: Status
+        run: git status
+
+      - name: Build
+        env:
+          CI: true
+          NODE_ENV: production
+        run: pnpm run build
+
+      - name: Deploy
+        if: github.ref == 'refs/heads/main'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: dist
+          single-commit: true
+#      - name: Deploy with gh-pages
+#        run: |
+#          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+#          npm run deploy -- -u "stereopasa <support+actions@github.com>"
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
