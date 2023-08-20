@@ -6,7 +6,7 @@
   --dark-color: rgb(38, 38, 38);
   --light-color: rgb(248, 248, 248);
 
-  background-color: var(--dark-color);
+  /* background-color: var(--dark-color); */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,6 +20,15 @@
   -moz-transition: none !important;
   -ms-transition: none !important;
   -o-transition: none !important;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 a {
