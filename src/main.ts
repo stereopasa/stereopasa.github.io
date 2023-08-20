@@ -10,13 +10,27 @@ if (typeof window !== 'undefined') {
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
-    <h1>heya</h1>
+    <h1 class='font'>heya</h1>
   </div>
 `;
 
+// Check if API exists
+if (document && document.fonts) {
+  // Do not block page loading
+  setTimeout(function () {
+    document.fonts.load('3.2em "Roboto"').then(() => {
+      // Make font using elements visible
+      document.documentElement.classList.add('font-loaded');
+    });
+  }, 0);
+} else {
+  // Fallback if API does not exist
+  document.documentElement.classList.add('font-loaded');
+}
+
 const toggle = document.getElementById('toggle') as HTMLInputElement;
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-const { documentElement } = document;
+const { documentElement, body } = document;
 
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme === 'light') {
@@ -37,6 +51,10 @@ toggle.addEventListener('input', (_e: Event) => {
   const isChecked = toggle!.checked;
   const theme = isChecked ? 'light' : 'dark';
   localStorage.setItem('theme', theme);
+});
+
+window.addEventListener('load', () => {
+  body.classList.remove('preload');
 });
 
 const urlParams = new URLSearchParams(window.location.search);

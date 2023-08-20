@@ -2,16 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <style>
+      html {
+        background-color: #f4f4f4;
+      }
+      @media (prefers-color-scheme: dark) {
+        html {
+          background-color: #262626;
+        }
+      }
+      input {
+        display: none;
+      }
+    </style>
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤔</text></svg>"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      as="style"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" />
     <!-- <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'> -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>‎</title>
   </head>
-  <body>
+  <body class="preload">
     <div id="theme-toggle">
       <input class="checkbox" id="toggle" type="checkbox" />
       <label class="toggle" for="toggle">

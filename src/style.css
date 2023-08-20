@@ -1,18 +1,25 @@
-/* @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900); */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
 
 :root {
-  /* font-family: 'Roboto', sans-serif; */
-  font-family: 'Courier New', sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
   color-scheme: light dark;
+
+  --dark-color: rgb(38, 38, 38);
+  --light-color: rgb(248, 248, 248);
+
+  background-color: var(--dark-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
 }
 
 a {
@@ -45,39 +52,51 @@ html {
     transparent
   );
 
-  --text-color: rgb(38, 38, 38);
-  --bkg-color: rgb(248, 248, 248);
+  --text-color: var(--dark-color);
+  --bkg-color: var(--light-color);
   --featured-img: linear-gradient(180deg, #fff, #262626);
 }
 
 html.dark-theme {
-  --text-color: rgb(248, 248, 248);
-  --bkg-color: rgb(38, 38, 38);
+  --text-color: var(--light-color);
+  --bkg-color: var(--dark-color);
 }
 
 @media (prefers-color-scheme: dark) {
   /* defaults to dark theme */
   html {
-    --text-color: rgb(248, 248, 248);
-    --bkg-color: rgb(38, 38, 38);
+    --text-color: var(--light-color);
+    --bkg-color: var(--dark-color);
   }
 
   html.light-theme {
-    --text-color: rgb(38, 38, 38);
-    --bkg-color: rgb(248, 248, 248);
+    --text-color: var(--dark-color);
+    --bkg-color: var(--light-color);
   }
 }
 
 html {
-  color: color-mix(in srgb, var(--text-color) 50%, transparent);
+  transition: all ease-in-out 0.3s;
+  color: color-mix(in srgb, var(--text-color) 30%, transparent);
   background-color: var(--bkg-color);
   background: var(--bkg-color);
   background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0), var(--bkg-color)),
     var(--featured-img);
-  /* transition: all ease-in-out 0.3s; */
 }
 
-h1 {
+.font {
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Courier New', sans-serif; */
+  line-height: 1.5;
+  font-weight: 400;
+  color: transparent;
+}
+
+html.font-loaded .font {
+  color: inherit; /* Override `transparent` from .font */
+}
+
+html.font-loaded h1 {
   font-size: 3.2em;
   line-height: 1.1;
   letter-spacing: 20px;
@@ -89,7 +108,7 @@ h1 {
 }
 
 @supports (-webkit-text-stroke: 1px black) {
-  h1 {
+  html.font-loaded h1 {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: rgba(38, 38, 38, 0.5);
     text-shadow: none;
