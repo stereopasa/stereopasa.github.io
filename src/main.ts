@@ -10,7 +10,7 @@ if (typeof window !== 'undefined') {
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
-    <h1 class='font'>heya</h1>
+    <h1 class='font'>hello world</h1>
   </div>
 `;
 
@@ -18,7 +18,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 if (document && document.fonts) {
   // Do not block page loading
   setTimeout(function () {
-    document.fonts.load('3.2em "Roboto"').then(() => {
+    document.fonts.load('3.2em "Adobe Text Pro"').then(() => {
       // Make font using elements visible
       document.documentElement.classList.add('font-loaded');
     });
@@ -75,4 +75,5 @@ if (debug) {
     document.documentElement.style.backgroundColor = `${color}`;
     console.log('backgroundColor', color);
   });
+  gui.add({ value: 0 }, 'value', 0, 100);
 }
