@@ -52,24 +52,16 @@ html {
   background-position: center;
   background-repeat: no-repeat;
 
-  --color: 248, 248, 248;
+  /* --color: 248, 248, 248;
   --color-with-transparency: color-mix(
     in srgb,
     var(--color) var(--transparency, 100%),
     transparent
-  );
+  ); */
 
   --text-color: var(--dark-color);
   --bkg-color: var(--light-color);
   --featured-img: linear-gradient(180deg, #fff, #262626);
-
-  transition: all ease-in-out 0.3s;
-  /* color: color-mix(in srgb, var(--text-color) 30%, transparent); */
-  color: var(--text-color);
-  background-color: var(--bkg-color);
-  background: var(--bkg-color);
-  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0), var(--bkg-color)),
-    var(--featured-img);
 }
 
 html.dark-theme {
@@ -77,34 +69,41 @@ html.dark-theme {
   --bkg-color: var(--dark-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  /* defaults to dark theme */
-  html {
-    --text-color: var(--light-color);
-    --bkg-color: var(--dark-color);
-  }
-
-  html.light-theme {
-    --text-color: var(--dark-color);
-    --bkg-color: var(--light-color);
-  }
+html {
+  transition: all ease-in-out 0.3s;
+  color: color-mix(in srgb, var(--text-color) 30%, transparent);
+  color: var(--text-color);
+  background-color: var(--bkg-color);
+  background: var(--bkg-color);
+  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0), var(--bkg-color)),
+    var(--featured-img);
+  color: red;
 }
 
 .font {
-  font-family: 'Adobe Text Pro', serif;
-  font-size-adjust: 1.1;
+  font-family:
+    'Adobe Text Pro',
+    -apple-system,
+    BlinkMacSystemFont,
+    serif;
+  /* font-size-adjust: 1.1; */
   line-height: 1.5;
   font-weight: 400;
   color: transparent;
+  opacity: 0;
 }
 
 html.font-loaded .font {
-  color: inherit; /* Override `transparent` from .font */
+  /* color: inherit;  */
+  /* Override `transparent` from .font */
+  color: var(--text-color);
+
 }
 
 html.font-loaded h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  opacity: 1;
   /* letter-spacing: 20px; */
   text-shadow:
     -1px -1px 0 black,
@@ -128,55 +127,15 @@ html.font-loaded h1 {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  html {
+    --text-color: var(--light-color);
+    --bkg-color: var(--dark-color);
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+
+  html.light-theme {
+    --text-color: var(--dark-color);
+    --bkg-color: var(--light-color);
   }
 }
