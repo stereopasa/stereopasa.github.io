@@ -8,9 +8,14 @@ if (typeof window !== 'undefined') {
   }
 }
 
+// <div>
+//   <h1 class='font'>hello world</h1>
+// </div>
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <h1 class='font'>hello world</h1>
+  <div class="stack" style="--stacks: 3;">
+    <span style="--index: 0;">hello world</span>
+    <span style="--index: 1;">hello world</span>
+    <span style="--index: 2;">hello world</span>
   </div>
 `;
 

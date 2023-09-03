@@ -7,19 +7,19 @@ settings:
 devDependencies:
   '@stereopasa/prettier-config':
     specifier: ^1.1.4
-    version: 1.1.4(prettier@3.0.2)
+    version: 1.1.4(prettier@3.0.3)
   lil-gui:
     specifier: ^0.18.2
     version: 0.18.2
   prettier:
-    specifier: ^3.0.2
-    version: 3.0.2
+    specifier: ^3.0.3
+    version: 3.0.3
   sass:
     specifier: ^1.66.1
     version: 1.66.1
   typescript:
-    specifier: ^5.1.6
-    version: 5.1.6
+    specifier: ^5.2.2
+    version: 5.2.2
   vite:
     specifier: ^4.4.9
     version: 4.4.9(sass@1.66.1)
@@ -257,13 +257,13 @@ packages:
       tslib: 2.5.2
     dev: true
 
-  /@stereopasa/prettier-config@1.1.4(prettier@3.0.2):
+  /@stereopasa/prettier-config@1.1.4(prettier@3.0.3):
     resolution: {integrity: sha512-kXy7CDVISlmiOM4uGiLkeC9k5RnHkIQonc1N4d/4qg7azbLlM8Wk6qPmIQKxMn/mxfakBPr6hvKPKZvyYLZvYQ==}
     peerDependencies:
       prettier: ^2.8.2 || ^3.0.0
     dependencies:
-      prettier: 3.0.2
-      prettier-plugin-packagejson: 2.4.5(prettier@3.0.2)
+      prettier: 3.0.3
+      prettier-plugin-packagejson: 2.4.5(prettier@3.0.3)
     dev: true
 
   /anymatch@3.1.3:
@@ -695,7 +695,7 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /prettier-plugin-packagejson@2.4.5(prettier@3.0.2):
+  /prettier-plugin-packagejson@2.4.5(prettier@3.0.3):
     resolution: {integrity: sha512-glG71jE1gO3y5+JNAhC8X+4yrlN28rub6Aj461SKbaPie9RgMiHKcInH2Moi2VGOfkTXaEHBhg4uVMBqa+kBUA==}
     peerDependencies:
       prettier: '>= 1.16.0'
@@ -703,13 +703,13 @@ packages:
       prettier:
         optional: true
     dependencies:
-      prettier: 3.0.2
+      prettier: 3.0.3
       sort-package-json: 2.5.1
       synckit: 0.8.5
     dev: true
 
-  /prettier@3.0.2:
-    resolution: {integrity: sha512-o2YR9qtniXvwEZlOKbveKfDQVyqxbEIWn48Z8m3ZJjBjcCmUy3xZGIv+7AkaeuaTr6yPXJjwv07ZWlsWbEy1rQ==}
+  /prettier@3.0.3:
+    resolution: {integrity: sha512-L/4pUDMxcNa8R/EthV08Zt42WBO4h1rarVtK0K+QJG0X187OLo7l699jWw0GKuwzkPQ//jMFA/8Xm6Fh3J/DAg==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
@@ -838,8 +838,8 @@ packages:
     resolution: {integrity: sha512-5svOrSA2w3iGFDs1HibEVBGbDrAY82bFQ3HZ3ixB+88nsbsWQoKqDRb5UBYAUPEzbBn6dAp5gRNXglySbx1MlA==}
     dev: true
 
-  /typescript@5.1.6:
-    resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
+  /typescript@5.2.2:
+    resolution: {integrity: sha512-mI4WrpHsbCIcwT9cF4FZvr80QUeKvsUsUvKDoR+X/7XHQH98xYD8YHZg7ANtz2GtZt/CBq2QJ0thkGJMHfqc1w==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
