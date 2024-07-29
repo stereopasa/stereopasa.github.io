@@ -9,15 +9,15 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@stereopasa/prettier-config": "^1.1.4",
-    "lil-gui": "^0.18.2",
-    "prettier": "^3.0.3",
-    "sass": "^1.66.1",
-    "typescript": "^5.2.2",
-    "vite": "^4.4.9"
+    "@stereopasa/prettier-config": "^1.2.4",
+    "lil-gui": "^0.19.2",
+    "prettier": "^3.3.3",
+    "sass": "^1.77.8",
+    "typescript": "^5.5.4",
+    "vite": "^5.3.5"
   },
   "engines": {
-    "node": ">=18",
+    "node": ">=20",
     "pnpm": ">=7"
   }
 }
