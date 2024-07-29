@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // !(function () {
+      //   try {
+      //     var d = document.documentElement.classList;
+      //     d.remove('light-theme', 'dark-theme');
+      //     var e = localStorage.getItem('theme');
+      //     if ('system' === e || (!e && true)) {
+      //       var t = '(prefers-color-scheme: dark)',
+      //         m = window.matchMedia(t);
+      //       m.media !== t || m.matches ? d.add('dark-theme') : d.add('light-theme');
+      //     } else if (e)
+      //       var x = {
+      //         light: 'light-theme',
+      //         dark: 'dark-theme',
+      //       };
+      //     d.add(x[e]);
+      //   } catch (e) {}
+      // })();
+    </script>
+    <style>
+      html {
+        background-color: #f4f4f4;
+      }
+      @media (prefers-color-scheme: dark) {
+        html {
+          background-color: #262626;
+        }
+      }
+      input {
+        display: none;
+      }
+      @font-face {
+        font-family: 'Adobe Text Pro';
+        font-weight: 400;
+        font-display: swap;
+        src:
+          url('/assets/fonts/adobetextpro-regular-webfont.woff2') format('woff2'),
+          url('/assets/fonts/adobetextpro-regular-webfont.woff') format('woff');
+      }
+    </style>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤔</text></svg>"
+    />
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      as="style"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" /> -->
+    <link
+      rel="preload"
+      href="/assets/fonts/adobetextpro-regular-webfont.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>‎</title>
+    <script type="module" crossorigin src="/assets/index-C4iq6GC2.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C9Kt48RG.css">
+  </head>
+  <body class="preload">
+    <div id="theme-toggle" class="noselect">
+      <input class="checkbox" id="toggle" type="checkbox" />
+      <label class="toggle" for="toggle">
+        <i class="star"></i>
+        <i class="star"></i>
+        <i class="star"></i>
+        <i class="star"></i>
+        <i class="star"></i>
+        <i class="star"></i>
+        <i class="star"></i>
+        <span class="disc"> <i></i><i></i><i></i> </span>
+        <span class="cloud">
+          <i class="cloud__sub1"></i>
+          <i class="cloud__sub2"></i>
+        </span>
+      </label>
+    </div>
+    <div id="app" class="noselect"></div>
+  </body>
+</html>
