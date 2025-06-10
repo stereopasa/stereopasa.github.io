@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@stereopasa/prettier-config": "^1.2.4",
+    "@stereopasa/prettier-config": "^1.2.5",
     "lil-gui": "^0.19.2",
     "prettier": "^3.3.3",
     "sass": "^1.77.8",

@@ -1,0 +1,25 @@
+*
+!*/
+
+## extensions
+!*.ts
+!*.html
+
+!package.json
+!.prettierrc.js
+
+## same as in .gitignore
+.idea
+.vscode
+node_modules
+
+# misc
+.DS_Store
+Thumbs.db
+Desktop.ini
+pnpm-lock.yml
+
+# debug
+npm-debug.log*
+lerna-debug.log*
+pnpm-debug.log*
